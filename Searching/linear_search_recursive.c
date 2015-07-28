@@ -18,7 +18,7 @@ void main()
 	{
 		printf("Element not found\n");
 	}
-        else
+         else
 	{
 		printf("Element is present at postion %d\n",p);
 	}
