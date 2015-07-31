@@ -1,5 +1,5 @@
 #include<stdio.h>
-void main()
+int main()
 {
 	int x[100],n,m,f,p,i;
 	printf("Enter the number of elements in the array: ");
@@ -22,4 +22,5 @@ void main()
     	printf("Element found at position %d\n",p);
     else
     	printf("Element not found\n");
+    return 0;
 }
