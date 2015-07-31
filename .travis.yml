@@ -1,3 +1,5 @@
+sudo: required
+
 language: c
 
 
@@ -9,4 +11,4 @@ compiler:
 
 # Run the Build script
 script:
-  - ./travis.sh $CONFIG
+  - ./travis.sh 
