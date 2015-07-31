@@ -1,6 +1,6 @@
 #include<stdio.h>
 int linear_search(int[],int,int,int);
-void main()
+int main()
 {
 	int x[100],n,m,p,ctr,i;
 	printf("Enter number of elements in the array ");
@@ -37,5 +37,6 @@ void main()
 		else
 		{
 			linear_search(x,n,m,++ctr);
-		}			
+		}
+		return 0;
 	}
