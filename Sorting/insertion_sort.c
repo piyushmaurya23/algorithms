@@ -1,5 +1,5 @@
 #include<stdio.h>
-void main()
+int main()
 {
 	int x[100],n,i,j,key;
 	printf("Enter number of elements to be sorted ");
@@ -26,4 +26,5 @@ void main()
 		printf("%d ",x[i]);
 	}
 	printf("\n");
+	return 0;
 }
