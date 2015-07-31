@@ -1,7 +1,7 @@
 sudo: required
 
 language: c
-
+./configure && make && make test
 
 os:
   - linux
@@ -9,6 +9,4 @@ os:
 compiler:
   - gcc
 
-# Run the Build script
-script:
-  - ./travis.sh 
+
