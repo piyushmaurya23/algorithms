@@ -1,6 +1,6 @@
 #include<stdio.h>
 int binary_search (int x[],int,int,int,int);
-void main()
+int main()
 {
 	int x[100],n,m,p,i,upper,lower;
 	printf("Enter the number of elements in the array ");
@@ -41,4 +41,5 @@ int binary_search(int x[],int n,int m,int lower,int upper)
 	}
 	else if(x[mid]<m)
 		binary_search(x,n,m,mid+1,upper);
+	return 0;
 }
