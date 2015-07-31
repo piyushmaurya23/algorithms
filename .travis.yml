@@ -1,0 +1,16 @@
+language: c
+
+
+os:
+  - linux
+  
+matrix:
+  include:
+    - compiler: gcc
+      env: CONFIG=autotools
+    - compiler: gcc
+      env: CONFIG=cmake
+
+# Run the Build script
+script:
+  - ./travis.sh $CONFIG
