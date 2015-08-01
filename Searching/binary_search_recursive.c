@@ -23,6 +23,8 @@ int main()
 	{
 		printf("Element found at position %d\n",p);
 	}
+	return 0;
+	
 }
 int binary_search(int x[],int n,int m,int lower,int upper)
 {
@@ -41,5 +43,4 @@ int binary_search(int x[],int n,int m,int lower,int upper)
 	}
 	else if(x[mid]<m)
 		binary_search(x,n,m,mid+1,upper);
-	return 0;
 }
