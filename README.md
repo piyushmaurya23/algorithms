@@ -1,5 +1,7 @@
 # algorithms
 
+[![Join the chat at https://gitter.im/piyush-maurya/algorithms](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/piyush-maurya/algorithms?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/piyush-maurya/algorithms.svg)](https://travis-ci.org/piyush-maurya/algorithms/)
 
 This is a repository of programs of "Introdution to Algorithms" by CLRS. There will also be other programs of course "DAA: Design and Analysis of Algorithms."
