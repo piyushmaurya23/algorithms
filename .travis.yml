@@ -6,5 +6,7 @@ os:
   
 compiler:
   - gcc
+  
+build: cc
 
 
