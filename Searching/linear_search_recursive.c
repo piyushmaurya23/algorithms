@@ -22,6 +22,7 @@ int main()
 	{
 		printf("Element is present at postion %d\n",p);
 	}
+	return 0;
 			
 }
 	int linear_search(int x[],int n,int m,int ctr)
@@ -38,5 +39,4 @@ int main()
 		{
 			linear_search(x,n,m,++ctr);
 		}
-		return 0;
 	}
