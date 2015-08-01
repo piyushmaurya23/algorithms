@@ -7,6 +7,6 @@ os:
 compiler:
   - gcc
   
-build: cc
+build: make
 
 
