@@ -1,68 +1,66 @@
-#include <stdio.h>
-#include <stdlib.h>
-void merge_sort(int [],int ,int);
-void merge(int [],int ,int ,int);
+
+#include<stdio.h>
+
+int arr[20];       
+
 int main()
 {
-	int array [50],i,n,p,r;
-	printf("How many numbers you want to enter:");
-	scanf("%d",&n);
-	printf("Enter the Numbers:\n");
-	for (i = 0; i < n; i++)
-	{
-		scanf("%d",&array[i]);
-	}
-	p=0;
-	r=n-1;
-	merge_sort(array,p,r);
-	printf("Sorted array is:\n");
-	for (i = 0; i < n; i++)
-	{
-		printf("%d\t",array[i] );
-	}
-	return 0;
-}
-void merge_sort(int array [],int p,int r)
-{
-	int q;
-	if (p<r)
-	{
-		q = (p+r)/2;
-		merge_sort(array,p,q);
-		merge_sort(array,q+1,r);
-		merge(array,p,q,r);
-	}
-}
-void merge(int array [],int p,int q,int r)
-{
-	int n1,n2,i,j,k;
-	n1 = q-p+1;
-	n2 = r-q;
-	int left[n1+1],right[n2+1];
-	for (i = 0; i < n1; i++)
-	{
-		left[i] = array[p+i];
-	}
-	for (j = 0; j < n2; j++)
-	{
-		right[j] = array[q+j+1];
-	}
-	left[n1] = 9999;
-	right[n2] = 9999;
-	i=0;
-	j=0;
-	for (k = p; i < r; k++)
-	{
-		if (left[i]<=right[j])
-		{
-			array[k] = left[i];
-			i = i+1;
-		}
-		else 
-		{
-			array[k] = right[j];
-			j = j+1;
-		}
+  int n,i;
 
-	}
+  printf("Enter the size of array\n");  
+  scanf("%d",&n);
+  printf("Enter the elements: ");
+  for(i=0; i<n; i++)
+    scanf("%d",&arr[i]);
+
+  merge_sort(arr,0,n-1);  
+
+  printf("Sorted array: ");  
+  for(i=0; i<n; i++)
+    printf("%d ",arr[i]);
+  printf("\n");
+
+  return 0;
+}
+
+int merge_sort(int arr[],int low,int high)
+{
+  int mid;
+  if(low<high) {
+    mid=(low+high)/2;
+    
+    merge_sort(arr,low,mid);
+    merge_sort(arr,mid+1,high);
+   
+    merge(arr,low,mid,high);
+  }
+
+  return 0;
+}
+
+int merge(int arr[],int l,int m,int h)
+{
+  int arr1[10],arr2[10];  
+  int n1,n2,i,j,k;
+  n1=m-l+1;
+  n2=h-m;
+
+  for(i=0; i<n1; i++)
+    arr1[i]=arr[l+i];
+  for(j=0; j<n2; j++)
+    arr2[j]=arr[m+j+1];
+
+  arr1[i]=9999;  
+  arr2[j]=9999;
+
+  i=0;
+  j=0;
+  for(k=l; k<=h; k++) { 
+    if(arr1[i]<=arr2[j])
+      arr[k]=arr1[i++];
+    else
+      arr[k]=arr2[j++];
+  }
+
+  return 0;
 }
