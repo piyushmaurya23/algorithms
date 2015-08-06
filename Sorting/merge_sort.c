@@ -56,12 +56,12 @@ void merge(int array [],int p,int q,int r)
 		if (left[i]<=right[j])
 		{
 			array[k] = left[i];
-			i = i+1;
+			i++;
 		}
 		else 
 		{
 			array[k] = right[j];
-			j = j+1;
+			j++;
 		}
 
 	}
