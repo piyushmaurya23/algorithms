@@ -1,7 +1,7 @@
 #include<stdio.h>
 void quick_sort(int[],int,int);
 int partition(int[],int,int);
-void main()
+int main()
 {
 	int a[100],n,i;
 	printf("Enter number of elements in the array ");
@@ -14,6 +14,7 @@ void main()
 	for(i=0;i<n;i++)
 		printf("%d ",a[i]);
 	printf("\n");
+	return 0;
 }
 void quick_sort(int a[],int p,int r)
 {
