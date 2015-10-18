@@ -28,7 +28,7 @@ int main()
 			scanf("%d",&a[i][j]);
 		printf("Enter the source of the graph: ");
 		scanf("%d",&s);
-		printf("The BFS traversal of graph is:");
+		printf("The DFS traversal of graph is:");
 		dfs(s);
 		for(i=1;i<=n;i++)
 		{
