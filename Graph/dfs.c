@@ -13,8 +13,8 @@ int main()
 	for(i=0;i<n;i++)
 		visited[i]=0;
 	printf("Enter the source of the graph: ");
-	printf("The DFS traversal of graph is: ");
 	scanf("%d",&source);
+	printf("The DFS traversal of graph is: ");
 	DFS(source);
 	return 0;
 }
